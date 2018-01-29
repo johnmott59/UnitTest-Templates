@@ -19,6 +19,9 @@ namespace ShapeTemplateLibUnitTest
         {
             Program p = new Program();
 
+            /*
+             * Call each unit test
+             */
             p.FlatMeshTest();
 
             p.PanelTest();
