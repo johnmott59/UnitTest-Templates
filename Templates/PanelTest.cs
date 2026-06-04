@@ -54,9 +54,9 @@ namespace ShapeTemplateLibUnitTest
 
             XElement ele = p.Compile();
 
-            GetMesh(ele, "c:\\work\\Panel_APILIB.fbx", true);
+           GetMesh(ele, "c:\\work\\Panel_APILIB.fbx", true);
 
-            GetMesh(ele, "c:\\work\\Panel_APIWEB.fbx", false);
+           // GetMesh(ele, "c:\\work\\Panel_APIWEB.fbx", false);
 
         }
 

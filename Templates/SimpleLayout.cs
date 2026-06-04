@@ -131,9 +131,9 @@ namespace ShapeTemplateLibUnitTest
 
             XElement ele = oSimpleLayout.Compile();
 
-            GetMesh(ele, "c:\\work\\layout_APILIB.fbx", true);
+           GetMesh(ele, "c:\\work\\layout_APILIB.fbx", true);
 
-            GetMesh(ele, "c:\\work\\layout_APIWEB.fbx", false);
+           // GetMesh(ele, "c:\\work\\layout_APIWEB.fbx", false);
 
 
         }

@@ -14,6 +14,7 @@ namespace ShapeTemplateLibUnitTest
 {
     public partial class Program
     {
+	// stairs
         public void StraitStairs()
         {
             string message = "";
@@ -27,9 +28,9 @@ namespace ShapeTemplateLibUnitTest
 
             ele = ss.Compile();
 
-            GetMesh(ele, "c:\\work\\StraightStairs_APILIB.fbx", true);
+           GetMesh(ele, "c:\\work\\StraightStairs_APILIB.fbx", true);
 
-            GetMesh(ele, "c:\\work\\StraightStairs_APIWEB.fbx", false);
+           // GetMesh(ele, "c:\\work\\StraightStairs_APIWEB.fbx", false);
 
 
         }

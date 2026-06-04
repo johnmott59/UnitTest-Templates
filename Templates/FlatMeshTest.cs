@@ -42,7 +42,7 @@ namespace ShapeTemplateLibUnitTest
 
             GetMesh(ele, "c:\\work\\FlatMesh_APILIB.fbx", true);
 
-            GetMesh(ele, "c:\\work\\FlatMesh_APIWEB.fbx", false);
+          //  GetMesh(ele, "c:\\work\\FlatMesh_APIWEB.fbx", false);
 
 
         }

@@ -28,7 +28,7 @@ namespace ShapeTemplateLibUnitTest
 
             GetMesh(ele, "c:\\work\\SingleRoom_APILIB.fbx", true);
 
-            GetMesh(ele, "c:\\work\\SingleRoom_APIWEB.fbx", false);
+           // GetMesh(ele, "c:\\work\\SingleRoom_APIWEB.fbx", false);
         }
 
 

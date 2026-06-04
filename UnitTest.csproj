@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ShapeTemplateLibUnitTest</RootNamespace>
     <AssemblyName>ShapeTemplateLibUnitTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,10 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ShapeTemplateLib, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\city001\packages\ShapeTemplateLib.1.5.0\lib\net45\ShapeTemplateLib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +61,10 @@
     <ProjectReference Include="..\..\APILib\APILib.csproj">
       <Project>{42f9d35c-1db2-4269-96d8-20e26dc1d2be}</Project>
       <Name>APILib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ShapeTemplatelib.git\trunk\ShapeTemplateLib.csproj">
+      <Project>{6b5a4857-a7f5-4213-9a92-2058f768831b}</Project>
+      <Name>ShapeTemplateLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

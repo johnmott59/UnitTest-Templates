@@ -31,9 +31,9 @@ namespace ShapeTemplateLibUnitTest
 
             XElement ele = gb.Compile();
 
-            GetMesh(ele, "c:\\work\\GearBase_APILIB.fbx", true);
+           GetMesh(ele, "c:\\work\\GearBase_APILIB.fbx", true);
 
-            GetMesh(ele, "c:\\work\\GearBase_APIWEB.fbx", false);
+            //GetMesh(ele, "c:\\work\\GearBase_APIWEB.fbx", false);
 
         }
     }
