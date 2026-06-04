@@ -21,6 +21,7 @@ namespace ShapeTemplateLibUnitTest
 
             /*
              * Call each unit test
+             * Comment/uncomment as needed to control which tests run
              */
             p.FlatMeshTest();
 
@@ -33,6 +34,15 @@ namespace ShapeTemplateLibUnitTest
             p.StraitStairs();
 
             p.SimpleLayout();
+
+            // New tests - uncomment to run
+             p.SingleRoomBuildingTest();
+             p.StraightStairsWithRunListTest();
+
+            // Multi-story building tests
+            p.BuildingWithWallsTest();
+            p.StairWellTemplateTest();
+            p.BuildingShellTemplateTest();
 
         }
 

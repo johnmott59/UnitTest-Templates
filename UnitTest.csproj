@@ -51,7 +51,10 @@
     <Compile Include="Templates\PanelTest.cs" />
     <Compile Include="Templates\SimpleLayout.cs" />
     <Compile Include="Templates\SingleRoomTest.cs" />
+    <Compile Include="Templates\SingleRoomBuildingTest.cs" />
     <Compile Include="Templates\Stairs.cs" />
+    <Compile Include="Templates\StraightStairsWithRunListTest.cs" />
+    <Compile Include="Templates\BuildingWithWallsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
