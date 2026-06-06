@@ -19,6 +19,7 @@ namespace ShapeTemplateLibUnitTest
             // Test 1: Default building (3 floors, standard dimensions)
             BuildingWithWallsTemplate building1 = new BuildingWithWallsTemplate();
             XElement ele = building1.Compile();
+            // BuildingWithWallsTemplate compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\BuildingWithWalls_Default_APILIB.fbx", true);
 
             // Test 2: Tall office building (6 floors, larger footprint)
@@ -33,6 +34,7 @@ namespace ShapeTemplateLibUnitTest
                 WindowHeight = 50
             };
             ele = building2.Compile();
+            // BuildingWithWallsTemplate compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\BuildingWithWalls_TallOffice_APILIB.fbx", true);
 
             // Test 3: Stairwell on left side
@@ -43,6 +45,7 @@ namespace ShapeTemplateLibUnitTest
                 StairwellOffset = new Point2D() { X = 50, Y = 100 }
             };
             ele = building3.Compile();
+            // BuildingWithWallsTemplate compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\BuildingWithWalls_LeftStairs_APILIB.fbx", true);
 
             // Test 4: Compact building (2 floors, small footprint)
@@ -57,6 +60,7 @@ namespace ShapeTemplateLibUnitTest
                 StairwellOffset = new Point2D() { X = 150, Y = 150 }
             };
             ele = building4.Compile();
+            // BuildingWithWallsTemplate compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\BuildingWithWalls_Compact_APILIB.fbx", true);
 
             // Test 5: Custom window pattern
@@ -68,6 +72,7 @@ namespace ShapeTemplateLibUnitTest
                 WindowHeight = 60
             };
             ele = building5.Compile();
+            // BuildingWithWallsTemplate compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\BuildingWithWalls_CustomWindows_APILIB.fbx", true);
 
             // Test 6: Back-to-front stairwell
@@ -79,6 +84,7 @@ namespace ShapeTemplateLibUnitTest
                 BuildingLength = 700
             };
             ele = building6.Compile();
+            // BuildingWithWallsTemplate compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\BuildingWithWalls_BackToFront_APILIB.fbx", true);
         }
 
@@ -96,6 +102,7 @@ namespace ShapeTemplateLibUnitTest
                 StairWellWidth = 120
             };
             XElement ele = stairwell.Compile();
+            // StairWellTemplate1 compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\StairWellTemplate_Standalone_APILIB.fbx", true);
         }
 
@@ -114,7 +121,9 @@ namespace ShapeTemplateLibUnitTest
                 RoofCapHeight = 40  // Add a roof cap
             };
             XElement ele = shell.Compile();
-            GetMesh(ele, "c:\\work\\BuildingShell_Standalone_APILIB.fbx", true);
+            // BuildingShellTemplate compiles to <simplelayout> template - wrap in scene
+            XElement scene = new XElement("scene", ele);
+            GetMesh(scene, "c:\\work\\BuildingShell_Standalone_APILIB.fbx", true);
         }
     }
 }

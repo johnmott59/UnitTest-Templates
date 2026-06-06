@@ -36,6 +36,7 @@ namespace ShapeTemplateLibUnitTest
 
             ele = ss.Compile();
 
+            // StraightStairsWithRunList compiles to <group>, already valid root
             GetMesh(ele, "c:\\work\\StraightStairsWithRunList_APILIB.fbx", true);
         }
     }

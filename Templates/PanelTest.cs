@@ -52,9 +52,16 @@ namespace ShapeTemplateLibUnitTest
                 BackID = "bm"
             });
 
+            // IMPORTANT: Set ConnectorSegmentVisible to show the sides/connector mesh
+            // Without this, only front and back faces are generated (no connector between them)
+            p.ConnectorSegmentVisible = new List<bool>() { true, true, true, true };
+
             XElement ele = p.Compile();
 
-           GetMesh(ele, "c:\\work\\Panel_APILIB.fbx", true);
+            // Wrap in <scene> container (required by GetMesh)
+            XElement scene = new XElement("scene", ele);
+
+           GetMesh(scene, "c:\\work\\Panel_APILIB.fbx", true);
 
            // GetMesh(ele, "c:\\work\\Panel_APIWEB.fbx", false);
 

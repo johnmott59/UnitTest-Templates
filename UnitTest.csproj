@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -65,7 +65,7 @@
       <Project>{42f9d35c-1db2-4269-96d8-20e26dc1d2be}</Project>
       <Name>APILib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ShapeTemplatelib.git\trunk\ShapeTemplateLib.csproj">
+    <ProjectReference Include="..\..\ShapeTemplateLib\ShapeTemplateLib.csproj">
       <Project>{6b5a4857-a7f5-4213-9a92-2058f768831b}</Project>
       <Name>ShapeTemplateLib</Name>
     </ProjectReference>

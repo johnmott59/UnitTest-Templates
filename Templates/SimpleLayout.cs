@@ -131,7 +131,10 @@ namespace ShapeTemplateLibUnitTest
 
             XElement ele = oSimpleLayout.Compile();
 
-           GetMesh(ele, "c:\\work\\layout_APILIB.fbx", true);
+            // SimpleLayout compiles to <simplelayout> template - wrap in scene
+            XElement scene = new XElement("scene", ele);
+
+           GetMesh(scene, "c:\\work\\layout_APILIB.fbx", true);
 
            // GetMesh(ele, "c:\\work\\layout_APIWEB.fbx", false);
 

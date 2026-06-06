@@ -25,25 +25,20 @@ namespace ShapeTemplateLibUnitTest
              */
             p.FlatMeshTest();
 
-            p.PanelTest();
-
-            p.SingleRoomTest();
-
-            p.GearTest();
-
-            p.StraitStairs();
-
-            p.SimpleLayout();
-
-            // New tests - uncomment to run
+            // Commenting out other tests to focus on FlatMeshTest
+             p.PanelTest();
+             p.SingleRoomTest();
+             p.GearTest();
+             p.StraitStairs();
+             p.SimpleLayout();
              p.SingleRoomBuildingTest();
              p.StraightStairsWithRunListTest();
+             p.BuildingWithWallsTest();
+             p.StairWellTemplateTest();
+             p.BuildingShellTemplateTest();
 
-            // Multi-story building tests
-            p.BuildingWithWallsTest();
-            p.StairWellTemplateTest();
-            p.BuildingShellTemplateTest();
-
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
         }
 
         public void GetMesh(XElement ele, string outputFile,bool bUseAPILib)

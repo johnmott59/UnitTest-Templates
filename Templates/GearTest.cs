@@ -31,7 +31,10 @@ namespace ShapeTemplateLibUnitTest
 
             XElement ele = gb.Compile();
 
-           GetMesh(ele, "c:\\work\\GearBase_APILIB.fbx", true);
+            // GearBase compiles to a Panel - wrap in scene container
+            XElement scene = new XElement("scene", ele);
+
+           GetMesh(scene, "c:\\work\\GearBase_APILIB.fbx", true);
 
             //GetMesh(ele, "c:\\work\\GearBase_APIWEB.fbx", false);
 

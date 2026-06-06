@@ -70,7 +70,10 @@ namespace ShapeTemplateLibUnitTest
 
             ele = srb.Compile();
 
-            GetMesh(ele, "c:\\work\\SingleRoomBuilding_APILIB.fbx", true);
+            // Wrap in scene container
+            XElement scene = new XElement("scene", ele);
+
+            GetMesh(scene, "c:\\work\\SingleRoomBuilding_APILIB.fbx", true);
         }
     }
 }
